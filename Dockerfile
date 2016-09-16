@@ -27,7 +27,8 @@ RUN sudo pip install --upgrade ${TF_BINARY_URL}
 # Install OpenCV
 #
 RUN sudo apt-get install -y python-opencv
-RUN sudo ln /dev/null /dev/raw1394
+RUN echo 'ln /dev/null /dev/raw1394' >> ~/.bashrc
+# RUN sudo ln /dev/null /dev/raw1394
 
 #
 # Install Tools
